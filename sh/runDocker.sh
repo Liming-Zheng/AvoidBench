@@ -1,0 +1,1 @@
+sudo docker run -it --device=/dev/dri --group-add video --volume=/tmp/.X11-unix:/tmp/.X11-unix  --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --gpus all --name=noetic_ab -e NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics -e NVIDIA_VISIBLE_DEVICES=all -v /home/dawn/Drone/SlapDroneOutdoors/AvoidBench:/AvoidBench catflying/slapdrone:main /bin/bash
